@@ -1,38 +1,12 @@
 /* ==============================
-   Global Styles
+   Global Styles - Colors & Themes
    ============================== */
 
 body {
-    background-color: #0b0f1a; /* Deep space */
-    color: #f5c542;
-    font-family: 'Lato', sans-serif;
-    padding-top: 56px; /* Space for fixed navbar */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-/* Override Bootstrap text colors to command gold */
-.text-black {
-    color: #f5c542 !important;
-}
-
-.nav-link {
-    color: #f5c542 !important;
-}
-
-.nav-link:hover {
-    color: #aab4ff !important;
-}
-
-p, h1, h2, h3, h4, h5, h6, a, span, div {
     color: #f5c542;
 }
 
+/* Override Bootstrap text colors to command gold - only for specific elements */
 a {
     color: #aab4ff;
 }
@@ -41,29 +15,91 @@ a:hover {
     color: #f5c542;
 }
 
-.dropdown-item {
+p, h1, h2, h3, h4, h5, h6, span {
     color: #f5c542;
 }
 
-.dropdown-item:hover {
+/* Navigation text colors */
+.nav-link {
+    color: #f5c542 !important;
+}
+
+.nav-link.text-black {
+    color: #f5c542 !important;
+}
+
+.nav-link:hover {
+    color: #aab4ff !important;
+}
+
+.dropdown-item {
+    color: #f5c542;
+    background-color: #0b0f1a;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active {
     background-color: #1f3cff;
     color: #f5c542;
 }
 
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #0b0f1a !important;
+    border: 1px solid #f5c542 !important;
+    display: block !important;
+}
+
+.show > .dropdown-menu {
+    display: block !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
 /* ==============================
-   Navigation
+   Header & Navigation - Colors
    ============================== */
 
-.navbar.fixed-top {
-    z-index: 9999 !important;
+.navbar-light .navbar-toggler {
+    border-color: #f5c542;
 }
 
-.bg-white {
-    background-color: #0b0f1a !important;
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5c542' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-#topnav {
+/* Form controls in header */
+.form-control {
     background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+    border-color: #f5c542 !important;
+}
+
+.form-control::placeholder {
+    color: #aab4ff;
+}
+
+.form-control:focus {
+    background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+    border-color: #f5c542 !important;
+    box-shadow: 0 0 0 0.2rem rgba(245, 197, 66, 0.25);
+}
+
+#delivery-banner {
+    background-color: #FFD700 !important;
+}
+
+#delivery-banner .col {
+    background-color: #FFD700 !important;
+}
+
+#delivery-banner h4 {
+    color: #1f3cff;
 }
 
 /* ==============================
@@ -96,69 +132,35 @@ a:hover {
 }
 
 /* ==============================
-   Cards & Content
+   Cards & Content - Colors
    ============================== */
 
-/* Constrain featured images to consistent height on index cards */
-.card .image-container .card-img-top {
-    height: 300px;
-    object-fit: cover;
-    border-radius: 0.75rem 0.75rem 0 0 !important;
-}
-
-/* Full image on post detail page - consistent sizing */
-.post-detail-img {
-    display: block;
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    padding: 0;
-    background-color: #11162a;
-    border-radius: 0.75rem 0.75rem 0 0;
-}
-
 .card {
-    border: none;
     background-color: rgba(17, 22, 42, 0.9);
-    border-radius: 0.75rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    z-index: 1;
 }
 
 .card:hover {
-    transform: translateY(-4px);
     box-shadow: 0 0 18px rgba(170, 180, 255, 0.25);
-    z-index: 1;
+}
+
+.post-detail-img {
+    background-color: #11162a;
 }
 
 /* ==============================
-   Images & Labels
+   Images & Labels - Colors
    ============================== */
 
-.image-container {
-    position: relative;
-}
-
 .image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 35%;
-    left: -2px;
     background-color: #1f3cff; /* Federation blue */
-    border-left: 4px solid #f5c542; /* Command stripe */
 }
 
 .author {
     color: #ffffff;
-    margin: 4px 8px;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
 }
 
 /* ==============================
-   Links & Titles
+   Links & Titles - Colors
    ============================== */
 
 .post-link {
@@ -174,6 +176,10 @@ a:hover {
    Buttons
    ============================== */
 
+.navbar.fixed-top {
+    z-index: 9999 !important;
+}
+
 .btn-signup,
 .btn-edit {
     background-color: #1f3cff; /* Federation blue */
@@ -188,8 +194,36 @@ a:hover {
     color: #05070d;
 }
 
+.shop-now-button {
+    background-color: transparent !important;
+    color: #f5c542 !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
+.btn-black {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
 /* ==============================
-   Delete Button
+   Delete Button - Colors
    ============================== */
 
 .btn-delete {
@@ -205,7 +239,7 @@ a:hover {
 }
 
 /* ==============================
-   Utility Classes
+   Utility Classes - Colors
    ============================== */
 
 .faded {
@@ -217,15 +251,11 @@ a:hover {
 }
 
 /* ==============================
-   Delete Modal
+   Delete Modal - Colors
    ============================== */
 
 #deleteModal {
     z-index: 99999 !important;
-}
-
-#deleteModal .modal-dialog {
-    margin-top: 20vh;
 }
 
 #deleteModal .modal-content {
@@ -253,10 +283,6 @@ a:hover {
     border-top: 1px solid #1f3cff !important;
 }
 
-#deleteModal .btn-close {
-    filter: invert(1) !important;
-}
-
 #deleteModal .btn-secondary {
     background-color: #05070d !important;
     border: 1px solid #aab4ff !important;
@@ -280,12 +306,11 @@ a:hover {
 }
 
 /* ==============================
-   Pagination
+   Pagination - Colors
    ============================== */
 
 .page-link {
     background-color: #11162a;
-    border: none;
     color: #aab4ff;
 }
 
@@ -295,19 +320,12 @@ a:hover {
 }
 .page-item.active .page-link {
     background-color: #f5c542;
-    border: none;
     color: #05070d;
 }
 
 /* ==============================
-   Django Messages / Alerts
+   Django Messages / Alerts - Colors
    ============================== */
-
-.alert-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
 
 .alert,
 .alert.alert-success,
@@ -318,10 +336,6 @@ a:hover {
     background-color: #1a3a5c !important;
     border: 2px solid #3a7ca5 !important;
     color: #e6e9f0 !important;
-    border-radius: 8px !important;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
 }
 
 .alert.alert-success {
@@ -345,6 +359,4 @@ a:hover {
     color: #ff6b6b !important;
 }
 
-.alert .btn-close {
-    filter: invert(1) !important;
-}
+

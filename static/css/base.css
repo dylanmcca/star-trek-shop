@@ -3,14 +3,209 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background_cropped.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: auto;
+    min-height: calc(100vh - 200px);
     color: #555;
     font-family: 'Lato';
 }
 
-/* from Bulma */
+#mobile-header-wrapper {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    #mobile-header-wrapper {
+        display: none;
+    }
+}
+
+header {
+    background-color: #0b0f1a;
+    width: 100%;
+}
+
+#topnav {
+    display: flex !important;
+    background-color: #0b0f1a !important;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+#topnav > div {
+    display: flex;
+    align-items: center;
+}
+
+#topnav > .col-lg-4:last-child {
+    justify-content: flex-end;
+}
+
+#topnav ul.list-inline {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 2rem;
+    list-style: none;
+}
+
+#topnav .list-inline-item {
+    margin-right: 0;
+    list-style: none;
+}
+
+#topnav > .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+#topnav > .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    #topnav {
+        flex-wrap: nowrap;
+    }
+    
+    #topnav > .col-lg-4 {
+        flex: 0 0 calc(33.333333% - 0.5rem) !important;
+        max-width: calc(33.333333% - 0.5rem) !important;
+    }
+}
+
+/* Dropdown menu styling across all dropdowns */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown.show > .dropdown-menu,
+.show > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    white-space: nowrap;
+    border: none;
+}
+
+/* Navbar dropdown display fix */
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar-nav .nav-item {
+    margin: 0;
+    position: relative;
+    list-style: none;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1001;
+    min-width: 160px;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu,
+.navbar-nav .show > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+}
+
+.dropdown-menu.show {
+    display: block !important;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+/* Ensure nav items are visible */
+.navbar-nav .nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.navbar {
+    background-color: #0b0f1a;
+    padding: 1rem 0;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar-nav .list-inline {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar-nav .list-inline-item {
+    margin-right: 1.5rem;
+}
+
+#delivery-banner {
+    background-color: #FFD700 !important;
+    text-align: center;
+}
+
+#delivery-banner .col {
+    background-color: #FFD700 !important;
+    padding: 0;
+}
+
+#delivery-banner h4 {
+    color: #1f3cff;
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.form-control {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.input-group-append .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -23,6 +218,17 @@ body {
     text-transform: uppercase;
 }
 
+.main-logo-link h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+@media (min-width: 992px) {
+    .main-logo-link h2 {
+        font-size: 2.5rem;
+    }
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -31,6 +237,9 @@ body {
     background: black;
     color: white;
     min-width: 260px;
+    padding: 1rem 2.5rem !important;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .btn-black {
@@ -56,16 +265,115 @@ body {
     border: 1px solid black !important;
 }
 
+/* ==============================
+   Cards & Content
+   ============================== */
+
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.card .image-container .card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.75rem 0.75rem 0 0 !important;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    z-index: 1;
+}
+
+.post-detail-img {
+    display: block;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    padding: 0;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+/* ==============================
+   Images & Labels
+   ============================== */
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 35%;
+    left: -2px;
+    border-left: 4px solid #f5c542;
+}
+
+.author {
+    margin: 4px 8px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+/* ==============================
+   Delete Modal
+   ============================== */
+
+#deleteModal {
+    z-index: 99999 !important;
+}
+
+#deleteModal .modal-dialog {
+    margin-top: 20vh;
+}
+
+#deleteModal .btn-close {
+    filter: invert(1) !important;
+}
+
+/* ==============================
+   Pagination
+   ============================== */
+
+.page-link {
+    border: none;
+}
+
+/* ==============================
+   Django Messages / Alerts
+   ============================== */
+
+.alert-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.alert,
+.alert.alert-success,
+.alert.alert-info,
+.alert.alert-warning,
+.alert.alert-danger,
+.alert.alert-error {
+    border-radius: 8px !important;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
   }
 }
 
-/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
