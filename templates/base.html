@@ -19,7 +19,6 @@
     integrity="sha384-Vko8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   {% endblock %}
 
   {% block extra_css %}
@@ -109,14 +108,18 @@
     </div>
     <div class="row bg-white">
       <nav class="navbar navbar-expand-lg navbar-light w-100">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="mobile-header-wrapper">
-          {% include 'includes/mobile-top-header.html' %}
+        <div class="container-fluid px-0">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <div id="mobile-header-wrapper">
+              {% include 'includes/mobile-top-header.html' %}
+            </div>
+            {% include 'includes/main-nav.html' %}
+          </div>
         </div>
-        {% include 'includes/main-nav.html' %}
       </nav>
     </div>
     <div id="delivery-banner" class="row text-center">

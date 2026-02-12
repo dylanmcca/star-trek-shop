@@ -4,6 +4,7 @@ html {
 
 body {
     background: url('/media/homepage_background_cropped.jpeg') no-repeat center center fixed;
+    position: relative;
     background-size: cover;
     height: auto;
     min-height: calc(100vh - 200px);
@@ -12,13 +13,79 @@ body {
 }
 
 #mobile-header-wrapper {
-    display: block;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f5c542;
+}
+
+#mobile-header-wrapper .list-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#mobile-header-wrapper .list-inline-item {
+    margin-right: 0;
+    list-style: none;
+}
+
+.navbar-collapse.show #mobile-header-wrapper {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    #mobile-header-wrapper {
+        display: flex;
+    }
+    
+    #main-nav {
+        display: none;
+    }
+    
+    #main-nav.show {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
     #mobile-header-wrapper {
-        display: none;
+        display: none !important;
     }
+    
+    #main-nav {
+        display: flex !important;
+    }
+}
+
+#topnav {
+    display: none !important;
+}
+
+@media (min-width: 992px) {
+    #topnav {
+        display: flex !important;
+    }
+}
+
+/* Navbar styling for mobile menu */
+.navbar {
+    background-color: #0b0f1a !important;
+}
+
+/* Main nav menu colors */
+.navbar-nav .nav-link {
+    color: #ffc400 !important;
+}
+
+.navbar-nav .dropdown-item {
+    color: #555;
 }
 
 header {
@@ -26,13 +93,37 @@ header {
     width: 100%;
 }
 
+/* Add spacing below fixed header for content */
+main, .page-header, #page-header {
+    padding-top: 2rem;
+}
+
+.header-container {
+    height: 250px !important;
+}
+
+@media (min-width: 992px) {
+    main, .page-header, #page-header {
+        padding-top: 3rem;
+    }
+    
+    .header-container {
+        height: 350px !important;
+    }
+}
+
+.message-container {
+    margin-top: 120px;
+}
+
+/* Desktop header styling */
 #topnav {
-    display: flex !important;
     background-color: #0b0f1a !important;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     padding: 1rem 0;
+    gap: 0;
 }
 
 #topnav > div {
@@ -40,21 +131,54 @@ header {
     align-items: center;
 }
 
+#topnav > .col-lg-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+}
+
+#topnav > .col-lg-4:first-child {
+    padding-left: 1.5rem;
+}
+
 #topnav > .col-lg-4:last-child {
     justify-content: flex-end;
+    padding-right: 1.5rem;
 }
 
 #topnav ul.list-inline {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
 }
 
 #topnav .list-inline-item {
     margin-right: 0;
     list-style: none;
+}
+
+#topnav .list-inline-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    margin-top: 0.15rem;
+}
+
+#topnav .nav-link {
+    color: #f5c542 !important;
+    padding: 0.35rem 0 !important;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#topnav .nav-link i {
+    margin-bottom: 0.25rem;
 }
 
 #topnav > .col-12 {
@@ -113,20 +237,103 @@ header {
     border: none;
 }
 
-/* Navbar dropdown display fix */
+/* Consolidated Navbar Styling */
+.navbar {
+    background-color: #0b0f1a;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar-toggler {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(245, 197, 66, 0.25);
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+}
+
+.navbar .container-fluid {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .navbar .container-fluid {
+        flex-wrap: wrap;
+    }
+    
+    .navbar-toggler {
+        order: -1;
+    }
+}
+
 .navbar-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
-    gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid #333;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+    
+    #main-nav {
+        width: 100%;
+        border-top: 1px solid #f5c542;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .navbar-nav .nav-item {
+        border-bottom: none;
+        width: auto;
+    }
+    
+    .navbar-nav .nav-link {
+        margin-right: 1rem !important;
+    }
 }
 
 .navbar-nav .nav-item {
     margin: 0;
     position: relative;
     list-style: none;
+}
+
+.navbar-nav .nav-link {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    color: #ffc400 !important;
+    font-weight: 400;
 }
 
 .navbar-nav .dropdown-menu {
@@ -144,37 +351,37 @@ header {
     display: block !important;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown.show > .dropdown-menu,
+.show > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+}
+
 .dropdown-menu.show {
     display: block !important;
 }
 
 .nav-item.dropdown .dropdown-toggle::after {
     display: none;
-}
-
-/* Ensure nav items are visible */
-.navbar-nav .nav-link {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-.navbar {
-    background-color: #0b0f1a;
-    padding: 1rem 0;
-}
-
-.navbar-nav {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.navbar-nav .list-inline {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.navbar-nav .list-inline-item {
-    margin-right: 1.5rem;
 }
 
 #delivery-banner {
@@ -196,14 +403,46 @@ header {
 }
 
 .form-control {
-    min-height: 44px;
-    padding: 0.75rem 1rem;
+    min-height: 40px;
+    padding: 0.5rem 0.75rem;
     font-size: 1rem;
 }
 
+.input-group {
+    display: flex !important;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group .form-control {
+    min-height: 40px;
+    height: 40px;
+    flex: 1;
+    border-radius: 0 !important;
+}
+
+.input-group-append {
+    margin-left: 0;
+}
+
 .input-group-append .btn {
-    padding: 0.75rem 1.5rem;
+    padding: 0;
+    min-height: 40px;
+    height: 40px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
+    border-radius: 0 !important;
+    line-height: 1;
+}
+
+.input-group-append .btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon {
@@ -233,36 +472,12 @@ header {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-    padding: 1rem 2.5rem !important;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
 .text-black {
-    color: #000 !important;
+    color: #f5c542 !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #f5c542 !important;
 }
 
 /* ==============================
@@ -386,4 +601,361 @@ header {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* ==============================
+   Global Styles - Colors & Themes (from style.css)
+   ============================== */
+
+.message-container {
+    margin-top: 120px;
+}
+
+body {
+    color: #f5c542;
+}
+
+/* Override Bootstrap text colors to command gold */
+a {
+    color: #aab4ff;
+}
+
+a:hover {
+    color: #f5c542;
+}
+
+p, h1, h2, h3, h4, h5, h6, span {
+    color: #f5c542;
+}
+
+/* Navigation text colors */
+.nav-link {
+    color: #f5c542 !important;
+}
+
+.nav-link.text-black {
+    color: #f5c542 !important;
+}
+
+.nav-link:hover {
+    color: #aab4ff !important;
+}
+
+.dropdown-item {
+    color: #f5c542;
+    background-color: #0b0f1a;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #1f3cff;
+    color: #f5c542;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #0b0f1a !important;
+    border: 1px solid #f5c542 !important;
+}
+
+.show > .dropdown-menu {
+    display: block !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+/* ==============================
+   Header & Navigation - Colors
+   ============================== */
+
+.navbar-light .navbar-toggler {
+    border-color: #f5c542;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f5c542' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Form controls in header */
+.form-control {
+    background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+    border-color: #f5c542 !important;
+}
+
+.form-control::placeholder {
+    color: #aab4ff;
+}
+
+.form-control:focus {
+    background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+    border-color: #f5c542 !important;
+    box-shadow: 0 0 0 0.2rem rgba(245, 197, 66, 0.25);
+}
+
+/* ==============================
+   Branding
+   ============================== */
+
+.brand {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f5c542;
+    letter-spacing: 0.05em;
+}
+
+.red-o {
+    color: #c92a2a;
+}
+
+.thin {
+    font-weight: 300;
+    color: #aab4ff;
+}
+
+/* ==============================
+   Backgrounds
+   ============================== */
+
+.main-bg {
+    background-color: #0b0f1a;
+}
+
+/* ==============================
+   Cards & Content - Colors
+   ============================== */
+
+.card {
+    background-color: rgba(17, 22, 42, 0.9);
+}
+
+.card:hover {
+    box-shadow: 0 0 18px rgba(170, 180, 255, 0.25);
+}
+
+.post-detail-img {
+    background-color: #11162a;
+}
+
+/* ==============================
+   Images & Labels - Colors
+   ============================== */
+
+.image-flash {
+    background-color: #1f3cff;
+}
+
+.author {
+    color: #ffffff;
+}
+
+/* ==============================
+   Links & Titles - Colors
+   ============================== */
+
+.post-link {
+    text-decoration: none;
+    color: #aab4ff;
+}
+
+.post-link:hover {
+    color: #f5c542;
+}
+
+/* ==============================
+   Buttons
+   ============================== */
+
+.navbar.fixed-top {
+    z-index: 9999 !important;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #1f3cff;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-signup:hover,
+.btn-signup:active,
+.btn-edit:hover {
+    background-color: #f5c542;
+    color: #05070d;
+}
+
+.shop-now-button {
+    background-color: transparent !important;
+    color: #f5c542 !important;
+    border: 2px solid #f5c542 !important;
+    min-width: 300px;
+    padding: 1.5rem 3rem !important;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
+.btn-black {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
+/* ==============================
+   Delete Button - Colors
+   ============================== */
+
+.btn-delete {
+    color: #ffffff;
+    background: #c92a2a;
+    border: none;
+}
+
+.btn-delete:hover,
+.btn-delete:active {
+    background-color: #ff4d4d;
+    color: #ffffff;
+}
+
+/* ==============================
+   Utility Classes - Colors
+   ============================== */
+
+.faded {
+    color: #6c738a;
+}
+
+.approval {
+    color: #5ddcff;
+}
+
+/* ==============================
+   Delete Modal - Colors
+   ============================== */
+
+#deleteModal {
+    z-index: 99999 !important;
+}
+
+#deleteModal .modal-content {
+    background-color: #11162a !important;
+    border: 1px solid #1f3cff !important;
+    color: #e6e9f0 !important;
+}
+
+#deleteModal .modal-header {
+    background-color: #11162a !important;
+    border-bottom: 1px solid #1f3cff !important;
+}
+
+#deleteModal .modal-title {
+    color: #f5c542 !important;
+}
+
+#deleteModal .modal-body {
+    background-color: #11162a !important;
+    color: #e6e9f0 !important;
+}
+
+#deleteModal .modal-footer {
+    background-color: #11162a !important;
+    border-top: 1px solid #1f3cff !important;
+}
+
+#deleteModal .btn-secondary {
+    background-color: #05070d !important;
+    border: 1px solid #aab4ff !important;
+    color: #aab4ff !important;
+}
+
+#deleteModal .btn-secondary:hover {
+    background-color: #1f3cff !important;
+    border-color: #1f3cff !important;
+    color: #ffffff !important;
+}
+
+#deleteModal .btn-danger {
+    background-color: #c92a2a !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+#deleteModal .btn-danger:hover {
+    background-color: #ff4d4d !important;
+}
+
+/* ==============================
+   Pagination - Colors
+   ============================== */
+
+.page-link {
+    background-color: #11162a;
+    color: #aab4ff;
+}
+
+.page-link:hover {
+    background-color: #1f3cff;
+    color: #ffffff;
+}
+
+.page-item.active .page-link {
+    background-color: #f5c542;
+    color: #05070d;
+}
+
+/* ==============================
+   Django Messages / Alerts - Colors
+   ============================== */
+
+.alert,
+.alert.alert-success,
+.alert.alert-info,
+.alert.alert-warning,
+.alert.alert-danger,
+.alert.alert-error {
+    background-color: #1a3a5c !important;
+    border: 2px solid #3a7ca5 !important;
+    color: #e6e9f0 !important;
+}
+
+.alert.alert-success {
+    border-color: #f5c542 !important;
+    color: #f5c542 !important;
+}
+
+.alert.alert-info {
+    border-color: #3a7ca5 !important;
+    color: #aab4ff !important;
+}
+
+.alert.alert-warning {
+    border-color: #f5c542 !important;
+    color: #f5c542 !important;
+}
+
+.alert.alert-danger,
+.alert.alert-error {
+    border-color: #c92a2a !important;
+    color: #ff6b6b !important;
 }
