@@ -1,0 +1,58 @@
+[
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "tos",
+      "friendly_name": "Star Trek: The Original Series"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "tng",
+      "friendly_name": "Star Trek: The Next Generation"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "ds9",
+      "friendly_name": "Star Trek: Deep Space Nine"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+      "name": "voyager",
+      "friendly_name": "Star Trek: Voyager"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+      "name": "enterprise",
+      "friendly_name": "Star Trek: Enterprise"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+      "name": "discovery",
+      "friendly_name": "Star Trek: Discovery"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+      "name": "snw",
+      "friendly_name": "Star Trek: Strange New Worlds"
+    }
+  }
+]

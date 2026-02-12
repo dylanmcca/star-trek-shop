@@ -1,0 +1,690 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-001",
+      "name": "Captain Kirk Command Tunic",
+      "description": "Gold command uniform replica from The Original Series.",
+      "price": "79.99",
+      "rating": "4.82",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/William_Shatner_Star_Trek.JPG",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-002",
+      "name": "Spock Science Officer Shirt",
+      "description": "Blue science division uniform replica.",
+      "price": "74.99",
+      "rating": "4.88",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Leonard_Nimoy_1976.JPG",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-003",
+      "name": "Classic Phaser Replica",
+      "description": "Screen-accurate TOS phaser prop replica.",
+      "price": "149.99",
+      "rating": "4.76",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Star_Trek_Phaser.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-004",
+      "name": "Communicator Replica",
+      "description": "Flip-style communicator replica.",
+      "price": "129.99",
+      "rating": "4.79",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Star_Trek_Communicator.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-005",
+      "name": "USS Enterprise NCC-1701 Model",
+      "description": "Highly detailed starship model.",
+      "price": "199.99",
+      "rating": "4.93",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/USS_Enterprise_NCC-1701.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-006",
+      "name": "Starfleet Delta Badge",
+      "description": "Metal command insignia badge.",
+      "price": "19.99",
+      "rating": "4.52",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Starfleet_insignia.svg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "sku": "TOS-007",
+      "name": "TOS Crew Poster",
+      "description": "Poster featuring the original crew.",
+      "price": "14.99",
+      "rating": "4.48",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Trek_TOS_cast.jpg",
+      "image": null
+    }
+  },
+
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-001",
+      "name": "Picard Captain Uniform",
+      "description": "TNG era captain uniform replica.",
+      "price": "89.99",
+      "rating": "4.84",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Patrick_Stewart_by_Gage_Skidmore.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-002",
+      "name": "Data Character Poster",
+      "description": "High resolution Data character poster.",
+      "price": "24.99",
+      "rating": "4.57",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Brent_Spiner_2019.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-003",
+      "name": "Enterprise-D Model",
+      "description": "USS Enterprise NCC-1701-D starship model.",
+      "price": "219.99",
+      "rating": "4.94",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/USS_Enterprise_NCC-1701-D.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-004",
+      "name": "TNG Phaser Type II",
+      "description": "Hand phaser replica from TNG.",
+      "price": "159.99",
+      "rating": "4.78",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Star_Trek_TNG_Phaser.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-005",
+      "name": "Starfleet Combadge",
+      "description": "Magnetic combadge from TNG.",
+      "price": "29.99",
+      "rating": "4.66",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Starfleet_combadge_TNG.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-006",
+      "name": "LCARS Desk Mat",
+      "description": "LCARS themed desk mat.",
+      "price": "34.99",
+      "rating": "4.59",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/LCARS_style_interface.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 2,
+      "sku": "TNG-007",
+      "name": "Borg Cube Miniature",
+      "description": "Detailed Borg cube collectible.",
+      "price": "49.99",
+      "rating": "4.72",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Borg_cube_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-001",
+      "name": "Captain Sisko Uniform",
+      "description": "Deep Space Nine era command uniform replica.",
+      "price": "84.99",
+      "rating": "4.81",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Avery_Brooks_2011.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-002",
+      "name": "Major Kira Uniform",
+      "description": "Bajoran militia uniform replica.",
+      "price": "79.99",
+      "rating": "4.74",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Nana_Visitor_2012.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-003",
+      "name": "USS Defiant Model",
+      "description": "Highly detailed Defiant-class starship model.",
+      "price": "189.99",
+      "rating": "4.92",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/USS_Defiant_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-004",
+      "name": "Deep Space Nine Station Model",
+      "description": "Space station collectible display model.",
+      "price": "229.99",
+      "rating": "4.95",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Deep_Space_Nine_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-005",
+      "name": "Dominion War Poster",
+      "description": "High resolution DS9 Dominion War artwork.",
+      "price": "19.99",
+      "rating": "4.46",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Deep_Space_Nine_cast.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-006",
+      "name": "Ferengi Mug",
+      "description": "Rules of Acquisition themed ceramic mug.",
+      "price": "17.99",
+      "rating": "4.38",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Armin_Shimerman_2011.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "category": 3,
+      "sku": "DS9-007",
+      "name": "Bajoran Earring Replica",
+      "description": "Screen-inspired Bajoran d'ja pagh.",
+      "price": "29.99",
+      "rating": "4.63",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Bajoran_earring_replica.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-001",
+      "name": "Captain Janeway Uniform",
+      "description": "Voyager-era captain uniform replica.",
+      "price": "89.99",
+      "rating": "4.83",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Kate_Mulgrew_2017.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-002",
+      "name": "USS Voyager Model",
+      "description": "Intrepid-class Voyager display model.",
+      "price": "209.99",
+      "rating": "4.93",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/USS_Voyager_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-003",
+      "name": "Seven of Nine Poster",
+      "description": "High resolution Seven of Nine artwork.",
+      "price": "24.99",
+      "rating": "4.55",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Jeri_Ryan_2012.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-004",
+      "name": "Voyager Combadge",
+      "description": "Delta Quadrant Starfleet combadge.",
+      "price": "27.99",
+      "rating": "4.64",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Starfleet_combadge_TNG.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-005",
+      "name": "Hirogen Weapon Replica",
+      "description": "Detailed Hirogen weapon prop replica.",
+      "price": "149.99",
+      "rating": "4.71",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Hirogen_weapon_prop.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-006",
+      "name": "Doctor EMH Poster",
+      "description": "Emergency Medical Hologram artwork.",
+      "price": "19.99",
+      "rating": "4.49",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Robert_Picardo_2019.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "category": 4,
+      "sku": "VOY-007",
+      "name": "Delta Flyer Model",
+      "description": "Voyager shuttlecraft Delta Flyer model.",
+      "price": "99.99",
+      "rating": "4.76",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Delta_Flyer_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-001",
+      "name": "NX-01 Enterprise Model",
+      "description": "Detailed NX-01 starship model from Enterprise.",
+      "price": "189.99",
+      "rating": "4.89",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/NX-01_Enterprise_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-002",
+      "name": "Captain Archer Uniform",
+      "description": "Blue Starfleet jumpsuit replica.",
+      "price": "84.99",
+      "rating": "4.74",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Scott_Bakula_2011.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-003",
+      "name": "Enterprise Era Phaser",
+      "description": "Phase pistol replica.",
+      "price": "139.99",
+      "rating": "4.68",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Star_Trek_Enterprise_phase_pistol.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-004",
+      "name": "Vulcan IDIC Pendant",
+      "description": "Symbol of Infinite Diversity in Infinite Combinations.",
+      "price": "39.99",
+      "rating": "4.61",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/IDIC_symbol.png",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-005",
+      "name": "Enterprise Crew Poster",
+      "description": "High resolution Enterprise cast poster.",
+      "price": "19.99",
+      "rating": "4.47",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Star_Trek_Enterprise_cast.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-006",
+      "name": "Starfleet Patch Set",
+      "description": "Enterprise era embroidered patches.",
+      "price": "14.99",
+      "rating": "4.39",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Starfleet_patch.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+      "category": 5,
+      "sku": "ENT-007",
+      "name": "Enterprise Blueprint Poster",
+      "description": "Technical schematic print of NX-01.",
+      "price": "24.99",
+      "rating": "4.55",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/NX-01_blueprint.jpg",
+      "image": null
+    }
+  },
+
+  {
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-001",
+      "name": "USS Discovery Model",
+      "description": "Crossfield-class starship model.",
+      "price": "209.99",
+      "rating": "4.88",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/USS_Discovery_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-002",
+      "name": "Michael Burnham Uniform",
+      "description": "Discovery era command uniform.",
+      "price": "94.99",
+      "rating": "4.72",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Sonequa_Martin-Green_2019.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-003",
+      "name": "Discovery Combadge",
+      "description": "Magnetic Starfleet delta badge.",
+      "price": "34.99",
+      "rating": "4.63",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Discovery_combadge.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-004",
+      "name": "Spore Drive Art Print",
+      "description": "Futuristic spore drive wall art.",
+      "price": "29.99",
+      "rating": "4.54",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Star_Trek_Discovery_spore_drive.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-005",
+      "name": "Section 31 Badge",
+      "description": "Section 31 insignia collectible.",
+      "price": "19.99",
+      "rating": "4.46",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Section_31_logo.png",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 41,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-006",
+      "name": "Discovery Crew Poster",
+      "description": "Discovery cast promotional poster.",
+      "price": "22.99",
+      "rating": "4.48",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Star_Trek_Discovery_cast.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 42,
+    "fields": {
+      "category": 6,
+      "sku": "DIS-007",
+      "name": "Discovery Delta Pin",
+      "description": "Metallic Discovery era delta insignia.",
+      "price": "16.99",
+      "rating": "4.37",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Starfleet_delta_Discovery.png",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 43,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-001",
+      "name": "USS Enterprise SNW Model",
+      "description": "Strange New Worlds Enterprise model.",
+      "price": "229.99",
+      "rating": "4.94",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/SNW_Enterprise_model.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 44,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-002",
+      "name": "Captain Pike Uniform",
+      "description": "Modernized TOS-style uniform replica.",
+      "price": "99.99",
+      "rating": "4.86",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Anson_Mount_2018.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 45,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-003",
+      "name": "SNW Phaser Replica",
+      "description": "Updated Strange New Worlds phaser.",
+      "price": "169.99",
+      "rating": "4.78",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/SNW_phaser_prop.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 46,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-004",
+      "name": "SNW Combadge",
+      "description": "Gold delta insignia badge.",
+      "price": "29.99",
+      "rating": "4.65",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/SNW_combadge.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 47,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-005",
+      "name": "SNW Crew Poster",
+      "description": "Strange New Worlds cast poster.",
+      "price": "21.99",
+      "rating": "4.52",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Star_Trek_SNW_cast.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 48,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-006",
+      "name": "USS Enterprise Bridge Art",
+      "description": "Modern bridge interior artwork.",
+      "price": "34.99",
+      "rating": "4.59",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/SNW_bridge_set.jpg",
+      "image": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 49,
+    "fields": {
+      "category": 7,
+      "sku": "SNW-007",
+      "name": "SNW Delta Collectible Pin",
+      "description": "Collector's Strange New Worlds insignia.",
+      "price": "18.99",
+      "rating": "4.44",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/SNW_delta_symbol.png",
+      "image": null
+    }
+  }
+]
