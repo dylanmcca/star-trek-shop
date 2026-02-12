@@ -3,6 +3,7 @@
     "model": "products.category",
     "pk": 1,
     "fields": {
+      "id": 1,
       "name": "tos",
       "friendly_name": "Star Trek: The Original Series"
     }
@@ -11,6 +12,7 @@
     "model": "products.category",
     "pk": 2,
     "fields": {
+      "id": 2,
       "name": "tng",
       "friendly_name": "Star Trek: The Next Generation"
     }
@@ -19,6 +21,7 @@
     "model": "products.category",
     "pk": 3,
     "fields": {
+      "id": 3,
       "name": "ds9",
       "friendly_name": "Star Trek: Deep Space Nine"
     }
@@ -27,6 +30,7 @@
     "model": "products.category",
     "pk": 4,
     "fields": {
+      "id": 4,
       "name": "voyager",
       "friendly_name": "Star Trek: Voyager"
     }
@@ -35,6 +39,7 @@
     "model": "products.category",
     "pk": 5,
     "fields": {
+      "id": 5,
       "name": "enterprise",
       "friendly_name": "Star Trek: Enterprise"
     }
@@ -43,6 +48,7 @@
     "model": "products.category",
     "pk": 6,
     "fields": {
+      "id": 6,
       "name": "discovery",
       "friendly_name": "Star Trek: Discovery"
     }
@@ -51,6 +57,7 @@
     "model": "products.category",
     "pk": 7,
     "fields": {
+      "id": 7,
       "name": "snw",
       "friendly_name": "Star Trek: Strange New Worlds"
     }
