@@ -16,10 +16,10 @@
                 TOS - The Original Series
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="TOS">
-                <a href="" class="dropdown-item">Kirk</a>
-                <a href="" class="dropdown-item">Spock</a>
-                <a href="" class="dropdown-item">Sulu</a>
-                <a href="" class="dropdown-item">Scotty</a>
+                <a href="{% url 'products' %}?category=tos_kirk" class="dropdown-item">Kirk</a>
+                <a href="{% url 'products' %}?category=tos_spock" class="dropdown-item">Spock</a>
+                <a href="{% url 'products' %}?category=tos_sulu" class="dropdown-item">Sulu</a>
+                <a href="{% url 'products' %}?category=tos_scotty" class="dropdown-item">Scotty</a>
             </div>
         </li>
 
@@ -28,9 +28,9 @@
                 TNG & Beyond
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="TNG and Beyond">
-                <a href="" class="dropdown-item">Picard</a>
-                <a href="" class="dropdown-item">Janeway &amp; Voyager</a>
-                <a href="" class="dropdown-item">Archer &amp; Enterprise</a>
+                <a href="{% url 'products' %}?category=tng_picard" class="dropdown-item">Picard</a>
+                <a href="{% url 'products' %}?category=tng_janeway" class="dropdown-item">Janeway &amp; Voyager</a>
+                <a href="{% url 'products' %}?category=tng_archer" class="dropdown-item">Archer &amp; Enterprise</a>
             </div>
         </li>
 
@@ -39,10 +39,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=all_specials" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
