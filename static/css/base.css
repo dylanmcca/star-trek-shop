@@ -786,6 +786,41 @@ p, h1, h2, h3, h4, h5, h6, span {
 }
 
 /* ==============================
+   Sort Dropdown Styling
+   ============================== */
+
+.sort-select-wrapper {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.sort-select-wrapper .custom-select-lg {
+    padding: 0.75rem 2.5rem 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    height: auto !important;
+    border: 2px solid #f5c542 !important;
+    background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+    border-radius: 0.5rem !important;
+    min-width: 250px;
+    margin-right: 30px !important;
+}
+
+.sort-select-wrapper .custom-select-lg:focus {
+    border-color: #aab4ff !important;
+    box-shadow: 0 0 0 0.2rem rgba(170, 180, 255, 0.25) !important;
+    background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+}
+
+.sort-select-wrapper .custom-select-lg option {
+    background-color: #0b0f1a;
+    color: #f5c542;
+}
+
+/* ==============================
    Product Grid Layout
    ============================== */
 
