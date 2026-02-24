@@ -45,9 +45,18 @@ body {
 }
 
 .btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    background: #0b0f1a;
+    color: #f5c542 !important; /* use important to override link colors for <a> elements */
+    border: 2px solid #f5c542;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
 
 header {
     background-color: #0b0f1a;
@@ -990,4 +999,105 @@ p, h1, h2, h3, h4, h5, h6, span {
 .alert.alert-error {
     border-color: #c92a2a !important;
     color: #ff6b6b !important;
+}
+/* ==============================
+   Shopping Bag Table
+   ============================== */
+
+.container.mb-2 > .row:first-of-type {
+    text-align: center;
+}
+
+.container.mb-2 > .row:first-of-type hr {
+    margin: 1rem auto !important;
+    width: 70% !important;
+    max-width: 90% !important;
+}
+
+.table-responsive {
+    margin: 0 auto !important;
+    width: fit-content;
+}
+
+.table {
+    text-align: center;
+}
+
+.table img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 1rem !important;
+}
+
+.table thead th {
+    vertical-align: middle;
+    padding: 1rem !important;
+    font-size: 1rem;
+}
+
+.table h6 {
+    font-size: 1.25rem !important;
+    margin: 0.5rem 0 !important;
+}
+
+.table h4 {
+    font-size: 1.5rem !important;
+    margin: 1rem 0 !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+/* Shopping Bag Buttons */
+.bag-btn {
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    margin: 0.5rem !important;
+}
+
+.btn-bag-primary {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.btn-bag-primary:hover,
+.btn-bag-primary:active,
+.btn-bag-primary:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
+.btn-bag-primary:hover span,
+.btn-bag-primary:active span,
+.btn-bag-primary:focus span {
+    color: #0b0f1a !important;
+}
+
+.btn-bag-secondary {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.btn-bag-secondary:hover,
+.btn-bag-secondary:active,
+.btn-bag-secondary:focus {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
+.btn-bag-secondary:hover span,
+.btn-bag-secondary:active span,
+.btn-bag-secondary:focus span {
+    color: #0b0f1a !important;
 }
