@@ -319,11 +319,16 @@ header {
     background-color: #FFD700 !important;
     text-align: center;
     position: static;
+    display: flex;
+    justify-content: center;
 }
 
 #delivery-banner .col {
     background-color: #FFD700 !important;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #delivery-banner h4 {
