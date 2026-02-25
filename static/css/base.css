@@ -373,27 +373,69 @@ header {
     border-radius: 0 !important;
 }
 
-.input-group-append {
-    margin-left: 0;
-}
-
+.input-group-prepend .btn,
 .input-group-append .btn {
     padding: 0;
     min-height: 40px;
     height: 40px;
-    width: 44px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 0 !important;
     line-height: 1;
 }
 
+.input-group-prepend .btn i,
 .input-group-append .btn i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block !important;
+    width: 1em;
+    height: 1em;
+    font-size: 1.2em;
+}
+
+.input-group-prepend .btn.btn-starfleet,
+.input-group-append .btn.btn-starfleet {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.input-group-prepend .btn.btn-starfleet:hover,
+.input-group-prepend .btn.btn-starfleet:active,
+.input-group-prepend .btn.btn-starfleet:focus,
+.input-group-append .btn.btn-starfleet:hover,
+.input-group-append .btn.btn-starfleet:active,
+.input-group-append .btn.btn-starfleet:focus {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
+    border-color: #f5c542 !important;
+}
+
+.update-link {
+    display: inline-block !important;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    color: #87ceeb !important;
+    text-decoration: none;
+}
+
+.update-link:hover {
+    color: #aab4ff !important;
+    text-decoration: underline;
+}
+
+.remove-item {
+    display: inline-block !important;
+    margin-top: 0.5rem;
+    color: #ff6b6b !important;
+    text-decoration: none;
+}
+
+.remove-item:hover {
+    color: #ff8787 !important;
+    text-decoration: underline;
 }
 
 .icon {
@@ -476,8 +518,11 @@ header {
     bottom: 10px;
     right: 10px;
 }
-.btt-link {
+.btt-link 
+.update-link
+.remove-item{
     cursor: pointer;
+
 }
 
 /* ==============================
@@ -486,6 +531,15 @@ header {
 
 .image-container {
     position: relative;
+}
+
+.image-container img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.product-details-container {
+    padding-left: 2rem;
 }
 
 .image-flash {
@@ -770,6 +824,39 @@ p, h1, h2, h3, h4, h5, h6, span {
     background-color: #f5c542 !important;
     color: #0b0f1a !important;
     border: 2px solid #f5c542 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    vertical-align: top !important;
+}
+
+.btn-starfleet.btn-lg {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    margin-right: 0.5rem;
+    height: 44px !important;
+    min-height: 44px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap;
+}
+
+input[type="submit"].btn-starfleet.btn-lg {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    line-height: 1.2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    border: 2px solid #f5c542 !important;
+}
+
+.btn-starfleet span {
+    color: #0b0f1a !important;
+    display: inline-block;
 }
 
 .btn-starfleet:hover,
@@ -780,12 +867,25 @@ p, h1, h2, h3, h4, h5, h6, span {
     border-color: #f5c542 !important;
 }
 
+.btn-starfleet:hover span,
+.btn-starfleet:focus span,
+.btn-starfleet:active span {
+    color: #f5c542 !important;
+}
+
 .btn-starfleet:disabled,
 .btn-starfleet.disabled {
-    background-color: #8b7014 !important;
+    background-color: #f5c542 !important;
     color: #0b0f1a !important;
-    border-color: #8b7014 !important;
-    opacity: 0.7;
+    border-color: #f5c542 !important;
+    cursor: not-allowed;
+}
+
+.input-group-prepend .btn.btn-starfleet:disabled,
+.input-group-append .btn.btn-starfleet:disabled {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border-color: #f5c542 !important;
     cursor: not-allowed;
 }
 
