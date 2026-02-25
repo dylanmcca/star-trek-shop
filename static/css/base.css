@@ -766,18 +766,27 @@ p, h1, h2, h3, h4, h5, h6, span {
     border-color: #f5c542 !important;
 }
 
-.btn-black {
-    background-color: #1f3cff !important;
-    color: #f5c542 !important;
+.btn-starfleet {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
     border: 2px solid #f5c542 !important;
 }
 
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background-color: #f5c542 !important;
-    color: #0b0f1a !important;
+.btn-starfleet:hover,
+.btn-starfleet:active,
+.btn-starfleet:focus {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
     border-color: #f5c542 !important;
+}
+
+.btn-starfleet:disabled,
+.btn-starfleet.disabled {
+    background-color: #8b7014 !important;
+    color: #0b0f1a !important;
+    border-color: #8b7014 !important;
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 /* ==============================
