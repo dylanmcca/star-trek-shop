@@ -156,6 +156,13 @@
   {% block postloadjs %}
   <script type="text/javascript">
     $('.toast').toast('show');
+    $('.toast .close').on('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).closest('.toast').fadeOut(300, function() {
+        $(this).toast('dispose');
+      });
+    });
   </script>
   {% endblock %}
 
