@@ -115,12 +115,21 @@ header {
 }
 
 .custom-toast {
-    overflow: visible;
+    overflow-y: auto;
     background-color: #0b0f1a;
     border: 2px solid #1f3cff;
     border-radius: 0;
     box-shadow: 0 4px 12px rgba(31, 60, 255, 0.15);
     min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-toast:has(.bag-notification-wrapper) {
+    min-height: 700px;
 }
 
 .custom-toast .toast-header {
@@ -131,6 +140,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .custom-toast .toast-header strong {
@@ -157,10 +167,103 @@ header {
     background-color: #0b0f1a !important;
     color: #f5c542 !important;
     padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.5rem;
+}
+
+.custom-toast .toast-body > * {
+    flex-shrink: 0;
+}
+
+.custom-toast .toast-body img {
+    min-height: 250px;
+    max-width: 100% !important;
+    width: 100% !important;
+    object-fit: contain;
+    flex-grow: 1;
+    flex-basis: 250px;
+    flex-shrink: 1;
+}
+
+.custom-toast .bag-notification-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    gap: 0.5rem;
+}
+
+.custom-toast .product-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.custom-toast .product-image {
+    width: 100% !important;
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+}
+
+.custom-toast .product-details {
+    color: #f5c542 !important;
+    width: 100%;
+}
+
+.custom-toast .product-details p {
+    color: #f5c542 !important;
+    margin: 0.25rem 0 !important;
+    display: block !important;
+}
+
+.custom-toast .toast-body > h6:first-of-type {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #1f3cff;
+}
+
+.custom-toast .toast-body > h6,
+.custom-toast .toast-body > p:last-of-type,
+.custom-toast .toast-body > a {
+    flex-shrink: 0;
 }
 
 .toast-capper {
     height: 4px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid #1f3cff;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+.arrow-up.arrow-success {
+    border-bottom-color: #28a745;
+}
+
+.arrow-up.arrow-danger {
+    border-bottom-color: #dc3545;
+}
+
+.arrow-up.arrow-warning {
+    border-bottom-color: #ffc107;
+}
+
+.arrow-up.arrow-info {
+    border-bottom-color: #1f3cff;
 }
 
 /* Toast Type Colors */
@@ -178,6 +281,12 @@ header {
 
 .toast-capper.bg-info {
     background-color: #1f3cff !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* -------------------------------- Media Queries */
