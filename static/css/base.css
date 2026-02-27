@@ -58,6 +58,27 @@ body {
     border-color: #f5c542 !important;
 }
 
+.btn-black {
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
+    border: 2px solid #f5c542 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
+    border-color: #f5c542 !important;
+}
+
+.btn-black span {
+    color: inherit !important;
+}
+
 header {
     background-color: #0b0f1a;
     width: 100%;
@@ -1025,6 +1046,8 @@ p, h1, h2, h3, h4, h5, h6, span {
     align-items: center !important;
     justify-content: center !important;
     white-space: nowrap;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
 }
 
 input[type="submit"].btn-starfleet.btn-lg {
@@ -1038,6 +1061,20 @@ input[type="submit"].btn-starfleet.btn-lg {
     justify-content: center !important;
     vertical-align: middle !important;
     border: 2px solid #f5c542 !important;
+}
+
+button.btn-starfleet.btn-lg {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    border: 2px solid #f5c542 !important;
+    box-sizing: border-box !important;
 }
 
 .btn-starfleet span {

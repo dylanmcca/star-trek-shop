@@ -1,0 +1,159 @@
+/* Checkout page styles */
+
+.checkout-item-image {
+    max-width: 100%;
+    max-height: 80px;
+    display: block;
+    object-fit: contain;
+}
+
+/* Checkout row layout */
+.checkout-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.checkout-row > .col-lg-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    width: 25% !important;
+}
+
+.checkout-row > .col-lg-9 {
+    flex: 0 0 calc(75% - 2rem) !important;
+    max-width: calc(75% - 2rem) !important;
+    width: calc(75% - 2rem) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Form column styling */
+.checkout-form {
+    padding: 0;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="tel"],
+.checkout-form select,
+.checkout-form textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem;
+    border-radius: 0.25rem !important;
+    box-sizing: border-box;
+}
+
+/* Fieldset styling */
+.checkout-form fieldset {
+    border: 2px solid #f5c542 !important;
+    background-color: rgba(245, 197, 66, 0.02);
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+    box-sizing: border-box;
+}
+
+.checkout-form legend {
+    color: #f5c542 !important;
+    border: none;
+    font-size: 0.85rem;
+}
+
+/* Ensure form controls have proper styling */
+.checkout-form .form-control {
+    border-radius: 0.25rem !important;
+    box-sizing: border-box;
+}
+
+/* Order summary styling - tighter layout */
+.col-lg-9 .row {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.col-lg-9 .row > div {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col-lg-9 .row > .col-2 {
+    width: 5%;
+    flex: 0 0 5%;
+    align-self: flex-start;
+    margin-bottom: 0 !important;
+}
+
+.col-lg-9 .row > .col-7 {
+    width: 30%;
+    flex: 0 0 30%;
+    align-self: flex-start;
+    margin-top: -1.5rem;
+}
+
+.col-lg-9 .row > .col-3 {
+    width: 65%;
+    flex: 0 0 65%;
+    text-align: left;
+    align-self: flex-start;
+    margin-top: -1.5rem;
+}
+
+.col-lg-9 .row.text-black {
+    margin: 0;
+    width: 100%;
+}
+
+.col-lg-9 .row.text-black > div {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col-lg-9 .row.text-black .col-2 {
+    max-width: 0%;
+    flex: 0 0 0%;
+    display: none;
+}
+
+.col-lg-9 .row.text-black .col-7 {
+    width: 35%;
+    flex: 0 0 35%;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+.col-lg-9 .row.text-black .col-3 {
+    width: 65%;
+    flex: 0 0 65%;
+    text-align: left;
+}
+
+.offset-2 {
+    margin-left: 0 !important;
+}
+
+/* Stack on smaller screens */
+@media (max-width: 991px) {
+    .checkout-row {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+    
+    .checkout-row > .col-lg-3,
+    .checkout-row > .col-lg-9 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}

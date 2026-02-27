@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'trekkie_shop.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -74,7 +77,12 @@ TEMPLATES = [
                 'django.template.context_processors.request', #for login/logout allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media', # for media files
                 'bag.contexts.bag_contents', # for bag contents in nav
+            ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ],
         },
     },
