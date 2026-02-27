@@ -1,3 +1,33 @@
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 2px solid #f5c542;
+  border-radius: 0.25rem;
+  background-color: #0b0f1a;
+  color: #f5c542;
+  box-shadow: 0 1px 3px 0 rgba(245, 197, 66, 0.1);
+  -webkit-transition: box-shadow 150ms ease, border-color 150ms ease;
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 0 8px 0 #1f3cff;
+  border-color: #1f3cff;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #0b0f1a !important;
+  color: #f5c542 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: rgba(245, 197, 66, 0.5);
+}
+
 /* Checkout page styles */
 
 .checkout-item-image {
