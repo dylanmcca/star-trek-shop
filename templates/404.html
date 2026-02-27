@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div style="text-align: center; padding: 60px 0;">
+                    <h1 class="logo-font" style="font-size: 120px; color: #f5c542; margin: 0; line-height: 1;">404</h1>
+                    <h2 class="logo-font" style="color: #f5c542; margin-top: 20px;">Page Not Found</h2>
+                    <p style="font-size: 1.1rem; color: #adb5bd; margin: 30px 0;">
+                        The page you're looking for has left spacedock.
+                    </p>
+                    <div style="margin-top: 40px;">
+                        <a href="{% url 'home' %}" class="btn btn-starfleet rounded-0 btn-lg" style="margin-right: 10px;">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span class="text-uppercase">Return Home</span>
+                        </a>
+                        <a href="{% url 'products' %}" class="btn btn-starfleet rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-th"></i>
+                            </span>
+                            <span class="text-uppercase">View Products</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
