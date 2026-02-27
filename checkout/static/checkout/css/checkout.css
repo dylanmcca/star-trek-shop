@@ -173,6 +173,39 @@
     margin-left: 0 !important;
 }
 
+/* Order confirmation wrapper styling */
+.order-confirmation-wrapper {
+    border: 2px solid #f5c542 !important;
+    background-color: rgba(245, 197, 66, 0.02);
+    border-radius: 0.25rem;
+    max-width: 600px;
+}
+
+.order-confirmation-wrapper .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-confirmation-wrapper .col-4 {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.order-confirmation-wrapper .col-8 {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+/* Position button under confirmation wrapper */
+.checkout-success-button {
+    max-width: 600px;
+    text-align: right;
+}
+
 /* Stack on smaller screens */
 @media (max-width: 991px) {
     .checkout-row {
