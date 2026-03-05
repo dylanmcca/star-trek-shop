@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @require_POST
@@ -18,8 +21,12 @@ def webhook(request):
 
     # get the webhook data and verify its signature
     payload = request.body
-    sig_header = request.META['HTTP_STRIPE_SIGNATURE']
+    sig_header = request.META.get('HTTP_STRIPE_SIGNATURE')
     event = None
+
+    if not sig_header:
+        logger.warning('Webhook called without Stripe signature header')
+        return HttpResponse(status=400)
 
     try:
         event = stripe.Webhook.construct_event(
@@ -27,13 +34,16 @@ def webhook(request):
         )
     except ValueError as e:
         # Invalid payload
+        logger.error(f'Webhook ValueError: {str(e)}')
         return HttpResponse(status=400)
     
     except stripe.error.SignatureVerificationError as e:
         # Invalid signature
+        logger.error(f'Webhook SignatureVerificationError: {str(e)}')
         return HttpResponse(status=400)
     
     except Exception as e:
+        logger.error(f'Webhook Exception: {str(e)}')
         return HttpResponse(content=e, status=400)
     
     # Set up a webhook handler
