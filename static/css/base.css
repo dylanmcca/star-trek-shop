@@ -126,6 +126,66 @@ header {
     }
 }
 
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #f5c542; /* Command gold */
+}
+
+.allauth-form-inner-content input {
+    border-color: #f5c542;
+    border-radius: 0;
+    background-color: #0b0f1a !important;
+    color: #f5c542 !important;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab4ff;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #0b0f1a;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #f5c542;
+    border: 2px solid #f5c542;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #f5c542;
+    background-color: #1f3cff;
+    border-color: #f5c542;
+}
+
+.allauth-form-inner-content a {
+	color: #aab4ff; /* Site link color */
+}
+
+input[name='q']::placeholder {
+    color: #aab4ff;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
