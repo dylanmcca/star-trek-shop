@@ -1,0 +1,25 @@
+#profile-update-form .form-group {
+    margin-bottom: 1.5rem !important;
+}
+
+#profile-update-form .form-group input,
+#profile-update-form .form-group select,
+#profile-update-form .form-group textarea {
+    width: 700px !important;
+    max-width: 100% !important;
+}
+
+.profile-form-input {
+    width: 700px !important;
+    max-width: 100% !important;
+}
+
+#profile-update-form .form-control {
+    color: #f5c542 !important;
+    background-color: #0b0f1a !important;
+    border-color: #f5c542 !important;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab4ff !important;
+}
