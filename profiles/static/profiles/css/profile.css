@@ -1,3 +1,32 @@
+.order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+/* Ensure columns stay side-by-side */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.col-12.col-lg-7 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.col-12.col-lg-5 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+#profile-update-form {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
 #profile-update-form .form-group {
     margin-bottom: 1.5rem !important;
 }
@@ -5,19 +34,27 @@
 #profile-update-form .form-group input,
 #profile-update-form .form-group select,
 #profile-update-form .form-group textarea {
-    width: 700px !important;
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .profile-form-input {
-    width: 700px !important;
+    width: 100% !important;
     max-width: 100% !important;
 }
 
 #profile-update-form .form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     color: #f5c542 !important;
     background-color: #0b0f1a !important;
     border-color: #f5c542 !important;
+}
+
+#profile-update-form .helptext {
+    display: none;
 }
 
 #profile-update-form input::placeholder {

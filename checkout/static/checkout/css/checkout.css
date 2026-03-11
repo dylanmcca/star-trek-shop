@@ -251,3 +251,7 @@ select option[value=""] {
     height: 100%;
 }
 
+/* Theme text colors */
+.text-gold {
+    color: #f5c542 !important;
+}
