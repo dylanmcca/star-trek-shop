@@ -23,3 +23,13 @@
 #profile-update-form input::placeholder {
     color: #aab4ff !important;
 }
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #f5c542 !important;
+    background-color: #0b0f1a !important;
+}
+
+#id_default_country option:first-child {
+    color: #aab4ff !important;
+}
