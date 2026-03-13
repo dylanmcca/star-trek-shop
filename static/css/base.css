@@ -336,11 +336,11 @@ input[name='q']::placeholder {
 }
 
 .arrow-up.arrow-danger {
-    border-bottom-color: #dc3545;
+    border-bottom-color: #c92a2a;
 }
 
 .arrow-up.arrow-warning {
-    border-bottom-color: #ffc107;
+    border-bottom-color: #f5c542;
 }
 
 .arrow-up.arrow-info {
@@ -353,11 +353,11 @@ input[name='q']::placeholder {
 }
 
 .toast-capper.bg-danger {
-    background-color: #dc3545 !important;
+    background-color: #c92a2a !important;
 }
 
 .toast-capper.bg-warning {
-    background-color: #ffc107 !important;
+    background-color: #f5c542 !important;
 }
 
 .toast-capper.bg-info {
@@ -864,6 +864,38 @@ input[name='q']::placeholder {
     text-align: center;
     max-width: 600px;
     width: 100%;
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #c92a2a;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c92a2a;
+    border-color: #c92a2a;
+    border-radius: 0;
+}
+
+.custom-checkbox .custom-control-label {
+    color: #ff6b6b;
 }
 
 /* -------------------------------- Media Queries */
