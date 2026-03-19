@@ -106,6 +106,8 @@
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
                                     <img class="checkout-item-image" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                {% elif item.product.image_url %}
+                                    <img class="checkout-item-image" src="{{ item.product.image_url }}" alt="{{ product.name }}">
                                 {% else %}
                                     <img class="checkout-item-image" src="{% static 'images/noimage-starfleet.svg' %}" alt="{{ product.name }}">
                                 {% endif %}
