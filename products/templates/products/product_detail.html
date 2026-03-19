@@ -17,11 +17,11 @@
                 <div class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}" onerror="this.onerror=null;this.src='{% static 'images/noimage-starfleet.svg' %}';">
                         </a>
                     {% elif product.image_url %}
                         <a href="{{ product.image_url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}" onerror="this.onerror=null;this.src='{% static 'images/noimage-starfleet.svg' %}';">
                         </a>
                     {% else %}
                             <img class="card-img-top img-fluid" src="{% static 'images/noimage-starfleet.svg' %}" alt="{{ product.name }}">
