@@ -186,8 +186,12 @@ if not DEBUG:
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if not DEBUG and os.getenv('CLOUDINARY_URL'):
-    # Use Cloudinary for media in production-like environments.
+USE_CLOUDINARY_MEDIA = bool(os.getenv('CLOUDINARY_URL')) and (
+    not DEBUG or os.getenv('USE_CLOUDINARY_IN_DEV', '1') == '1'
+)
+
+if USE_CLOUDINARY_MEDIA:
+    # Use Cloudinary for media when configured.
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 FREE_DELIVERY_THRESHOLD = 80
