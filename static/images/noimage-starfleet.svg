@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">No product image available</title>
+  <desc id="desc">Starfleet themed placeholder image with dark navy and command gold accents.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5c542" />
+      <stop offset="100%" stop-color="#e0a80d" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)" />
+  <rect x="50" y="50" width="1100" height="1100" rx="28" fill="none" stroke="url(#gold)" stroke-width="10" />
+
+  <polygon points="600,260 705,530 600,492 495,530" fill="url(#gold)" />
+  <polygon points="600,492 690,530 600,810 510,530" fill="url(#gold)" opacity="0.85" />
+
+  <line x1="220" y1="930" x2="980" y2="930" stroke="#f5c542" stroke-width="4" opacity="0.6" />
+
+  <text x="600" y="980" text-anchor="middle" fill="#f5c542" font-family="'Trebuchet MS', Arial, sans-serif" font-size="46" letter-spacing="3">IMAGE UNAVAILABLE</text>
+</svg>

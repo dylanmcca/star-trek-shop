@@ -181,8 +181,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if os.getenv('CLOUDINARY_URL'):
-    # Send Django uploads to Cloudinary.
+if not DEBUG and os.getenv('CLOUDINARY_URL'):
+    # Use Cloudinary for media in production-like environments.
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 FREE_DELIVERY_THRESHOLD = 80
