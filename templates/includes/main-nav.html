@@ -1,4 +1,10 @@
-<ul class="navbar-nav w-auto mx-auto">
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                 All Products
@@ -13,7 +19,7 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="TOS" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                22nd & 23rd Century Series
+                22nd & 23rd Centuries
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="TOS">
                 <a href="{% url 'products' %}?category=enterprise" class="dropdown-item">Enterprise</a>
@@ -25,7 +31,7 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="TNG and Beyond" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                24th Century Series
+                24th Century
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="TNG and Beyond">
                 <a href="{% url 'products' %}?category=tng" class="dropdown-item">The Next Generation</a>
@@ -34,4 +40,5 @@
             </div>
         </li>
     </ul>
+</div>
     
