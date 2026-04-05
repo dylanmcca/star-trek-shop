@@ -9,6 +9,20 @@
         background-size: cover;
         background-attachment: scroll;
     }
+
+    @media (max-width: 991px) {
+        body {
+            background-size: clamp(420px, 95vw, 1100px) auto;
+            background-position: center 140px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        body {
+            background-size: clamp(360px, 110vw, 820px) auto;
+            background-position: center 130px;
+        }
+    }
 </style>
 {% endblock %}
 
