@@ -115,10 +115,10 @@
             aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </button>
+          <div id="mobile-top-actions" class="d-lg-none ml-auto">
+            {% include 'includes/mobile-top-header.html' %}
+          </div>
           <div class="collapse navbar-collapse" id="main-nav">
-            <div id="mobile-header-wrapper">
-              {% include 'includes/mobile-top-header.html' %}
-            </div>
             {% include 'includes/main-nav.html' %}
           </div>
         </div>

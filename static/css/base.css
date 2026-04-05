@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    position: relative;
     background-color: #0b0f1a;
     height: auto;
     min-height: 100%;
@@ -15,8 +14,12 @@ body {
 }
 
 @media (max-width: 991px) {
-    body {
-        padding-top: 0;
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1100;
     }
     
     .container.h-100 {
@@ -82,6 +85,9 @@ body {
 header {
     background-color: #0b0f1a;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
 }
 
 #mobile-header-wrapper {
@@ -612,6 +618,120 @@ input[name='q']::placeholder {
     transition: opacity 0.3s, visibility 0.3s;
     padding: 0.5rem 0;
     margin: 0;
+}
+
+#mobile-top-actions {
+    display: none;
+}
+
+.mobile-top-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin: 0;
+    list-style: none;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+}
+
+.mobile-top-actions .list-inline-item {
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-top-actions .nav-link {
+    padding: 0.35rem 0.45rem !important;
+    font-size: 1rem;
+}
+
+.mobile-top-actions .dropdown-menu {
+    width: calc(100vw - 30px);
+    max-width: 340px;
+    left: 15px !important;
+    right: auto !important;
+    z-index: 1101;
+    position: fixed;
+    margin-top: 0;
+    top: 145px !important;
+}
+
+@media (max-width: 991px) {
+    header.container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    header .row.bg-dark-trek,
+    #delivery-banner {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    #delivery-banner .col {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    #main-nav,
+    #main-nav.show {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #main-nav .navbar-nav {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #main-nav .navbar-nav .nav-item {
+        width: 100% !important;
+    }
+
+    #main-nav .navbar-nav .nav-link {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 1rem !important;
+    }
+
+    #mobile-top-actions {
+        display: flex;
+        margin-left: auto;
+        flex: 1 1 auto;
+        min-width: 0;
+        width: calc(100% - 56px);
+    }
+
+    #mobile-top-actions .mobile-top-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        justify-content: stretch;
+        gap: 0.2rem;
+        padding-right: 0;
+    }
+
+    #mobile-top-actions .mobile-top-actions .list-inline-item {
+        width: 100%;
+    }
+
+    .mobile-top-actions .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.35rem 0.2rem !important;
+    }
+
+    .mobile-top-actions .nav-link p {
+        font-size: 0.9rem;
+        line-height: 1.1;
+        margin-top: 0.15rem;
+    }
+
+    .mobile-top-actions i.fa-lg {
+        font-size: 1.1rem;
+    }
 }
 
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu,
@@ -1312,46 +1432,74 @@ button.btn-starfleet.btn-lg {
    Product Grid Layout
    ============================== */
 
-.container-fluid > .row:last-of-type {
+.series-divider-wrap {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    clear: both;
+    margin: 1rem 0 0.75rem;
+    padding: 0 0.75rem;
+}
+
+.series-divider-first {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.series-label {
+    color: #f5c542 !important;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.series-divider {
+    border-top: 2px solid #f5c542;
+    opacity: 1;
+    margin: 0;
+}
+
+.products-grid-container > .row:last-of-type {
     display: flex !important;
     flex-wrap: wrap !important;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.col-6 {
+.products-grid-container .col-6 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
 }
 
-.col-md-4 {
+.products-grid-container .col-md-4 {
     flex: 0 0 33.333333% !important;
     max-width: 33.333333% !important;
     width: 33.333333% !important;
 }
 
-.col-lg-3 {
+.products-grid-container .col-lg-3 {
     flex: 0 0 25% !important;
     max-width: 25% !important;
     width: 25% !important;
 }
 
 @media (max-width: 375px) {
-    .container-fluid > .row:last-of-type {
+    .products-grid-container > .row:last-of-type {
         padding-left: 8px;
         padding-right: 8px;
         margin-left: 0;
         margin-right: 0;
     }
 
-    .col-sm-6,
-    .col-md-6,
-    .col-lg-4,
-    .col-xl-3,
-    .col-6,
-    .col-md-4,
-    .col-lg-3 {
+    .products-grid-container .col-sm-6,
+    .products-grid-container .col-md-6,
+    .products-grid-container .col-lg-4,
+    .products-grid-container .col-xl-3,
+    .products-grid-container .col-6,
+    .products-grid-container .col-md-4,
+    .products-grid-container .col-lg-3 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
         width: 100% !important;
@@ -1368,13 +1516,16 @@ button.btn-starfleet.btn-lg {
         width: 100%;
         justify-content: center;
         margin-left: 0;
+        max-width: 180px;
     }
 
     .sort-select-wrapper .custom-select-lg {
         width: 100%;
         min-width: 0;
-        max-width: 100%;
+        max-width: 180px;
         margin-right: 0 !important;
+        padding: 0.35rem 1.5rem 0.35rem 0.5rem !important;
+        font-size: 0.7rem !important;
     }
 
     .btn-warning {
@@ -1396,23 +1547,23 @@ button.btn-starfleet.btn-lg {
 
 /* iPhone Plus / Larger phones (430px) */
 @media (max-width: 430px) and (min-width: 376px) {
-    .container-fluid > .row:last-of-type {
+    .products-grid-container > .row:last-of-type {
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .col-sm-6,
-    .col-md-6,
-    .col-lg-4,
-    .col-xl-3 {
+    .products-grid-container .col-sm-6,
+    .products-grid-container .col-md-6,
+    .products-grid-container .col-lg-4,
+    .products-grid-container .col-xl-3 {
         flex: 0 0 50% !important;
         max-width: 50% !important;
         width: 50% !important;
     }
 
-    .col-6,
-    .col-md-4,
-    .col-lg-3 {
+    .products-grid-container .col-6,
+    .products-grid-container .col-md-4,
+    .products-grid-container .col-lg-3 {
         flex: 0 0 100% !important;
         max-width: 100% !important;
         width: 100% !important;
@@ -1593,19 +1744,83 @@ button.btn-starfleet.btn-lg {
    Shopping Bag Table
    ============================== */
 
-.container.mb-2 > .row:first-of-type {
+.container.mb-2 > .row:first-of-type,
+.bag-page-container > .row:first-of-type {
     text-align: center;
 }
 
-.container.mb-2 > .row:first-of-type hr {
+.container.mb-2 > .row:first-of-type hr,
+.bag-page-container > .row:first-of-type hr {
     margin: 1rem auto !important;
     width: 70% !important;
     max-width: 90% !important;
 }
 
 .table-responsive {
+    margin: 0 !important;
+    width: 100%;
+}
+
+.bag-table-wrapper {
     margin: 0 auto !important;
-    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-swipe-hint {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .bag-table-wrapper {
+        width: fit-content;
+    }
+
+    .bag-table-wrapper .table {
+        width: auto;
+        min-width: 980px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-swipe-hint {
+        display: block;
+    }
+
+    .bag-table-wrapper {
+        width: 100%;
+    }
+
+    .bag-table-wrapper .table {
+        min-width: 840px;
+        width: 100%;
+    }
+
+    .bag-table-wrapper .table img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .bag-table-wrapper .table tbody td,
+    .bag-table-wrapper .table thead th {
+        padding: 0.5rem !important;
+        font-size: 0.9rem;
+    }
+
+    .bag-table-wrapper .qty_input {
+        max-width: 48px;
+    }
+
+    .bag-table-scroll::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .bag-table-scroll::-webkit-scrollbar-thumb {
+        background: #f5c542;
+        border-radius: 4px;
+    }
 }
 
 .table {
