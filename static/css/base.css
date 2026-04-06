@@ -1264,8 +1264,8 @@ p, h1, h2, h3, h4, h5, h6, span {
 }
 
 .shop-now-button {
-    background-color: #0b0f1a !important;
-    color: #f5c542 !important;
+    background-color: #f5c542 !important;
+    color: #0b0f1a !important;
     border: 2px solid #f5c542 !important;
     min-width: 300px;
     padding: 1.5rem 3rem !important;
@@ -1279,8 +1279,8 @@ p, h1, h2, h3, h4, h5, h6, span {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus {
-    background-color: #f5c542 !important;
-    color: #0b0f1a !important;
+    background-color: #1f3cff !important;
+    color: #f5c542 !important;
     border-color: #f5c542 !important;
 }
 
