@@ -70,3 +70,9 @@
 #id_default_country option:first-child {
     color: #aab4ff !important;
 }
+
+.profile-update-btn {
+    padding: 0.375rem 0.75rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+}
