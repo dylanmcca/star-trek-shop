@@ -1235,9 +1235,18 @@ p, h1, h2, h3, h4, h5, h6, span {
     position: relative;
 }
 
-#user-options + .dropdown-menu {
+#user-options + .dropdown-menu,
+#mobile-user-options + .dropdown-menu {
     right: 0;
     left: auto;
+}
+
+@media (max-width: 991px) {
+    .mobile-top-actions #mobile-user-options + .dropdown-menu {
+        left: 15px !important;
+        right: auto !important;
+        transform: none !important;
+    }
 }
 
 /* ==============================
