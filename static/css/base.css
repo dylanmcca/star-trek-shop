@@ -584,10 +584,6 @@ input[name='q']::placeholder {
     .navbar-nav .nav-link {
         padding: 0.75rem 1rem !important;
     }
-    
-    .navbar .container-fluid {
-        flex-wrap: wrap;
-    }
 
     #main-nav {
         width: 100%;
@@ -1271,15 +1267,6 @@ p, h1, h2, h3, h4, h5, h6, span {
     letter-spacing: 0.05em;
 }
 
-.red-o {
-    color: #c92a2a;
-}
-
-.thin {
-    font-weight: 300;
-    color: #aab4ff;
-}
-
 /* ==============================
    Backgrounds
    ============================== */
@@ -1304,55 +1291,12 @@ p, h1, h2, h3, h4, h5, h6, span {
     box-shadow: 0 0 18px rgba(170, 180, 255, 0.25);
 }
 
-.post-detail-img {
-    background-color: #11162a;
-}
-
-/* ==============================
-   Images & Labels - Colors
-   ============================== */
-
-.image-flash {
-    background-color: #1f3cff;
-}
-
-.author {
-    color: #ffffff;
-}
-
-/* ==============================
-   Links & Titles - Colors
-   ============================== */
-
-.post-link {
-    text-decoration: none;
-    color: #aab4ff;
-}
-
-.post-link:hover {
-    color: #f5c542;
-}
-
 /* ==============================
    Buttons
    ============================== */
 
 .navbar.fixed-top {
     z-index: 9999 !important;
-}
-
-.btn-signup,
-.btn-edit {
-    background-color: #1f3cff;
-    color: #ffffff;
-    border: none;
-}
-
-.btn-signup:hover,
-.btn-signup:active,
-.btn-edit:hover {
-    background-color: #f5c542;
-    color: #05070d;
 }
 
 .shop-now-button {
