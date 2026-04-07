@@ -233,6 +233,35 @@ header {
 	color: #aab4ff; /* Site link color */
 }
 
+.auth-style-button {
+	display: inline-block;
+    font-weight: 400;
+    color: #0b0f1a;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #f5c542;
+    border: 2px solid #f5c542;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.auth-style-button:hover,
+.auth-style-button:active,
+.auth-style-button:focus {
+	color: #f5c542;
+    background-color: #1f3cff;
+    border-color: #f5c542;
+    text-decoration: none;
+}
+
 input[name='q']::placeholder {
     color: #aab4ff;
 }
@@ -1036,6 +1065,60 @@ input[name='q']::placeholder {
 .btn-file {
     position: relative;
     overflow: hidden;
+}
+
+.auth-style-button.btn-file {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    height: 44px;
+    padding: .75rem 1.5rem;
+    line-height: 1;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.select-image-button {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.product-action-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    padding: 0.75rem 1.5rem !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+    white-space: nowrap;
+}
+
+.description-field {
+    width: 50% !important;
+    max-width: 50% !important;
+}
+
+@media (max-width: 767px) {
+    .description-field {
+        width: 70% !important;
+        max-width: 70% !important;
+    }
+}
+
+.select-image-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 .btn-file input[type="file"] {

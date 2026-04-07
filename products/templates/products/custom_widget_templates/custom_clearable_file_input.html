@@ -11,7 +11,6 @@
     {% endif %}<br>
     <span class="text-black">{{ widget.input_text }}</span>
 {% endif %}
-<span class="btn btn-black rounded-0 btn-file">
-    Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
-</span>
+<button type="button" class="auth-style-button product-action-button select-image-button" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;height:44px;padding:.75rem 1.5rem;line-height:1;box-sizing:border-box;white-space:nowrap;font-size:1rem;margin-top:.5rem;" onclick="document.getElementById('new-image').click();">Select Image</button>
+<input class="select-image-input" id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 <p class="text-black font-weight-bold mt-2 mb-0" id="filename"></p>

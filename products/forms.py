@@ -23,3 +23,9 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border border-yellow rounded-0'
+
+        description_classes = self.fields['description'].widget.attrs.get('class', '')
+        self.fields['description'].widget.attrs['class'] = (
+            f'{description_classes} description-field'.strip()
+        )
+        self.fields['description'].widget.attrs['style'] = 'height: 8rem;'

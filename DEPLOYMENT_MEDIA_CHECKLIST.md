@@ -3,7 +3,6 @@
 ## Current audit snapshot (local)
 - Total products: 49
 - Products with ImageField value: 31
-- Products with image_url value: 49
 - Products missing both image sources: 0
 - ImageField files present in local media: 31/31
 
@@ -28,10 +27,9 @@ Set these in Heroku app settings:
 - Cloudinary media backend should be enabled when CLOUDINARY_URL exists.
 
 ## Data and media flow before deploy
-1. Confirm every product has either Product.image or image_url.
+1. Confirm every product has Product.image.
 2. Prefer Product.image for your own product assets.
-3. For products currently relying on image_url, verify external links are stable.
-4. In production admin, upload/replace images to populate Product.image where needed.
+3. In production admin, upload/replace images to populate Product.image where needed.
 
 ## Deployment verification after release
 1. Open products list page and verify images load over HTTPS.
