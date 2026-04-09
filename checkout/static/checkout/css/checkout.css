@@ -169,10 +169,6 @@
     text-align: left;
 }
 
-.offset-2 {
-    margin-left: 0 !important;
-}
-
 /* Order confirmation wrapper styling */
 .order-confirmation-wrapper {
     border: 2px solid #f5c542 !important;
