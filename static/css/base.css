@@ -213,6 +213,24 @@ header {
     margin-top: 0;
 }
 
+.allauth-form-inner-content label[for='id_remember'] {
+    display: inline-block;
+    color: #f5c542;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+
+.allauth-form-inner-content input[type='checkbox'] {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0 !important;
+    accent-color: #f5c542;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: #aab4ff;
 }
