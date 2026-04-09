@@ -8,7 +8,7 @@
             <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
@@ -20,7 +20,7 @@
             <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="TOS" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 22nd & 23rd Centuries
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="TOS">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="TOS">
                 <a href="{% url 'products' %}?category=enterprise" class="dropdown-item">Enterprise</a>
                 <a href="{% url 'products' %}?category=discovery" class="dropdown-item">Discovery</a>
                 <a href="{% url 'products' %}?category=snw" class="dropdown-item">Strange New Worlds</a>
@@ -29,10 +29,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="TNG and Beyond" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-lg-5" href="#" id="tng-and-beyond" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 24th Century
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="TNG and Beyond">
+            <div class="dropdown-menu border-0" role="menu" aria-labelledby="tng-and-beyond">
                 <a href="{% url 'products' %}?category=tng" class="dropdown-item">The Next Generation</a>
                 <a href="{% url 'products' %}?category=voyager" class="dropdown-item">Voyager</a>
                 <a href="{% url 'products' %}?category=ds9" class="dropdown-item">Deep Space Nine</a>

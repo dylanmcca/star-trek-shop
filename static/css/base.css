@@ -157,7 +157,8 @@ header {
         font-size: 1rem;
     }
 
-    #delivery-banner h4 {
+    #delivery-banner h4,
+    #delivery-banner p {
         font-size: 1rem;
     }
 
@@ -788,7 +789,8 @@ input[name='q']::placeholder {
     align-items: center;
 }
 
-#delivery-banner h4 {
+#delivery-banner h4,
+#delivery-banner p {
     color: #1f3cff;
     font-size: 1.5rem;
     padding: 0.2rem;
