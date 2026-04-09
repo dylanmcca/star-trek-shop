@@ -1,9 +1,13 @@
-<script type="text/javascript">
+<script>
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-        var minusDisabled = currentValue < 2;
+        var minValue = parseInt($(`#id_qty_${itemId}`).data('min'));
+        if (isNaN(minValue)) {
+            minValue = 1;
+        }
         var plusDisabled = currentValue > 98;
+        var minusDisabled = currentValue <= minValue;
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
