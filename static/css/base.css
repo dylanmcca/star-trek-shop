@@ -180,9 +180,16 @@ header {
 
 /* Allauth form formatting */
 
+.allauth-form-inner-content {
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #f5c542; /* Command gold */
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .allauth-form-inner-content input {
@@ -190,14 +197,34 @@ header {
     border-radius: 0;
     background-color: #0b0f1a !important;
     color: #f5c542 !important;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
+    display: block;
+    color: #f5c542;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.allauth-form-inner-content label:first-of-type {
+    margin-top: 0;
 }
 
 .allauth-form-inner-content input::placeholder {
     color: #aab4ff;
+}
+
+@media (min-width: 768px) {
+    .allauth-form-inner-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .allauth-form-inner-content input {
+        max-width: 400px;
+    }
 }
 
 .allauth-form-inner-content button,
