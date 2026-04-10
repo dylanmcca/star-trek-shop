@@ -931,6 +931,21 @@ input[name='q']::placeholder {
     border-color: #f5c542 !important;
 }
 
+.product-qty-wrapper {
+    max-width: 240px;
+}
+
+.product-qty-input-group {
+    width: auto;
+    display: inline-flex !important;
+}
+
+.product-qty-input-group .product-qty-input {
+    flex: 0 0 72px;
+    width: 72px;
+    text-align: center;
+}
+
 .update-link {
     display: inline-block !important;
     margin-top: 0.5rem;
