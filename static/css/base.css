@@ -1608,6 +1608,10 @@ button.btn-starfleet.btn-lg {
     padding-right: 15px;
 }
 
+.products-grid-container .product-card-col {
+    margin-bottom: 1.5rem;
+}
+
 .products-grid-container .col-6 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
