@@ -2050,3 +2050,27 @@ button.btn-starfleet.btn-lg {
 .btn-bag-secondary:focus span {
     color: #0b0f1a !important;
 }
+
+/* Laptop density tuning */
+@media (min-width: 992px) and (max-width: 1440px) {
+    html {
+        font-size: 93.75%;
+    }
+
+    .container.h-100 {
+        margin-top: clamp(260px, 28vh, 320px);
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.25rem;
+    }
+
+    #delivery-banner h4,
+    #delivery-banner p {
+        font-size: 1.2rem;
+    }
+
+    .main-logo-link h2 {
+        font-size: 2.15rem;
+    }
+}
