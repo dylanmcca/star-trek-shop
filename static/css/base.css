@@ -1779,6 +1779,14 @@ button.btn-starfleet.btn-lg {
     border: 1px solid #1f3cff;
     border-radius: 0.35rem;
     padding: 0.35rem 0.65rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#faq-content .faq-li details:hover {
+    border-color: #5ddcff;
+    box-shadow: 0 0 14px rgba(31, 60, 255, 0.18);
+    transform: translateY(-2px);
+    background-color: rgba(31, 60, 255, 0.08);
 }
 
 #faq-content .faq-li details[open] {
@@ -1838,6 +1846,14 @@ button.btn-starfleet.btn-lg {
     border: 1px solid #1f3cff;
     border-radius: 0.35rem;
     padding: 0.35rem 0.65rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#quotes-content .quotes-li details:hover {
+    border-color: #5ddcff;
+    box-shadow: 0 0 14px rgba(31, 60, 255, 0.18);
+    transform: translateY(-2px);
+    background-color: rgba(31, 60, 255, 0.08);
 }
 
 #quotes-content .quotes-li details[open] {
