@@ -23,6 +23,28 @@
     </div>
 </li>
 <li class="list-inline-item dropdown">
+    <a class="text-black nav-link" href="#" id="mobile-faq" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="text-center">
+            <div><i class="fas fa-question-circle fa-lg"></i></div>
+            <p class="my-0">FAQ</p>
+        </div>
+    </a>
+    <div class="dropdown-menu border-0" role="menu" aria-labelledby="mobile-faq">
+        <a href="{% url 'faq' %}" class="dropdown-item">All FAQs</a>
+    </div>
+</li>
+<li class="list-inline-item dropdown">
+    <a class="text-black nav-link" href="#" id="mobile-quotes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="text-center">
+            <div><i class="fas fa-quote-left fa-lg"></i></div>
+            <p class="my-0">Quotes FUN</p>
+        </div>
+    </a>
+    <div class="dropdown-menu border-0" role="menu" aria-labelledby="mobile-quotes">
+        <a href="{% url 'quotes' %}" class="dropdown-item">All Quotes</a>
+    </div>
+</li>
+<li class="list-inline-item dropdown">
     <a class="text-black nav-link" href="#" id="mobile-user-options" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-user fa-lg"></i></div>

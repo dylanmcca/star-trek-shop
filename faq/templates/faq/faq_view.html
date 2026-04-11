@@ -14,11 +14,6 @@
                 <h2 class="faq-h2">{{ faq.question }}</h2>
                 <p class="faq-text">{{ faq.answer }}</p>
             </li>
-        {% empty %}
-            <li class="faq-li">
-                <h2 class="faq-h2">No FAQs yet</h2>
-                <p class="faq-text">FAQ entries will appear here once they are added.</p>
-            </li>
         {% endfor %}
         </ul>
     </div>
