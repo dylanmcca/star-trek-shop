@@ -1782,7 +1782,13 @@ button.btn-starfleet.btn-lg {
 }
 
 #faq-content .faq-li details[open] {
+    background-color: #1f3cff;
     padding-bottom: 0.6rem;
+}
+
+#faq-content .faq-li details[open] summary,
+#faq-content .faq-li details[open] .faq-text {
+    color: #f5c542;
 }
 
 #faq-content .faq-li summary {
@@ -1835,7 +1841,13 @@ button.btn-starfleet.btn-lg {
 }
 
 #quotes-content .quotes-li details[open] {
+    background-color: #1f3cff;
     padding-bottom: 0.6rem;
+}
+
+#quotes-content .quotes-li details[open] summary,
+#quotes-content .quotes-li details[open] .quotes-text {
+    color: #f5c542;
 }
 
 #quotes-content .quotes-li summary {
