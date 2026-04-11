@@ -6,21 +6,20 @@
 
 <div class="default-page-container" id="quotes-container">
     <div id="quotes-content">
-        <h1 id="quotes-heading">Top 10 Quotes ALL Trekkies should know</h1>
-        <ul class="quotes-ul list-unstyled">
+        <h1 id="quotes-heading">Top 10 Quotes ALL Trekkies should know 🖖</h1>
+        <h2 id="quotes-subheading">Guess who said these famous trekkie quotes? Click the quotes for answer:</h2>
+        <div class="quotes-ul">
         <!-- Populates the quotes list -->
         {% for quote in quotes %}
-            <li class="quotes-li">
-                <p class="quotes-text mb-1">"{{ quote.quote }}"</p>
-                <h2 class="quotes-h2 h5 mb-1">{{ quote.character }}</h2>
-                <p class="quotes-text small">{{ quote.source }}</p>
-            </li>
-        {% empty %}
-            <li class="quotes-li">
-                <p class="quotes-text">No quotes available yet.</p>
-            </li>
+            <div class="quotes-li">
+                <details>
+                    <summary class="quotes-h2">"{{ quote.quote }}"</summary>
+                    <p class="quotes-text mb-1"><strong>Spoken by:</strong> {{ quote.character }}</p>
+                    <p class="quotes-text small mb-0"><strong>Stardate Source:</strong> {{ quote.source }}</p>
+                </details>
+            </div>
         {% endfor %}
-        </ul>
+        </div>
     </div>
 </div>
 

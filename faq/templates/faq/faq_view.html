@@ -6,16 +6,18 @@
 
 <div class="default-page-container" id="faq-container">
     <div id="faq-content">
-        <h1 id="faq-heading">FAQ</h1>
-        <ul class="faq-ul">
+        <h1 id="faq-heading">FAQ - click question for answers:</h1>
+        <div class="faq-ul">
         <!-- Populates the FAQ list -->
         {% for faq in faqs %}
-            <li class="faq-li">
-                <h2 class="faq-h2">{{ faq.question }}</h2>
-                <p class="faq-text">{{ faq.answer }}</p>
-            </li>
+            <div class="faq-li">
+                <details>
+                    <summary class="faq-h2">{{ faq.question }}</summary>
+                    <p class="faq-text">{{ faq.answer }}</p>
+                </details>
+            </div>
         {% endfor %}
-        </ul>
+        </div>
     </div>
 </div>
 

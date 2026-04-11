@@ -1758,6 +1758,112 @@ button.btn-starfleet.btn-lg {
     border: none;
 }
 
+/* ==============================
+   FAQ Page
+   ============================== */
+
+#faq-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#faq-content .faq-h2 {
+    font-weight: 700;
+}
+
+#faq-content .faq-li {
+    margin-bottom: 0.65rem;
+}
+
+#faq-content .faq-li details {
+    border: 1px solid #1f3cff;
+    border-radius: 0.35rem;
+    padding: 0.35rem 0.65rem;
+}
+
+#faq-content .faq-li details[open] {
+    padding-bottom: 0.6rem;
+}
+
+#faq-content .faq-li summary {
+    cursor: pointer;
+}
+
+#faq-content .faq-text {
+    margin: 0.55rem 0 0.1rem 0;
+}
+
+@media (min-width: 992px) {
+    #faq-content .faq-h2 {
+        font-size: 1.45rem;
+    }
+
+    #faq-content .faq-text {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 767px) {
+    #faq-content {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+/* ==============================
+   Quotes Page
+   ============================== */
+
+#quotes-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#quotes-content .quotes-h2 {
+    font-weight: 700;
+}
+
+#quotes-content .quotes-li {
+    margin-bottom: 0.65rem;
+}
+
+#quotes-content .quotes-li details {
+    border: 1px solid #1f3cff;
+    border-radius: 0.35rem;
+    padding: 0.35rem 0.65rem;
+}
+
+#quotes-content .quotes-li details[open] {
+    padding-bottom: 0.6rem;
+}
+
+#quotes-content .quotes-li summary {
+    cursor: pointer;
+}
+
+#quotes-content .quotes-text {
+    margin: 0.55rem 0 0.1rem 0;
+}
+
+@media (min-width: 992px) {
+    #quotes-content .quotes-h2 {
+        font-size: 1.45rem;
+    }
+
+    #quotes-content .quotes-text {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 767px) {
+    #quotes-content {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
 .btn-delete:hover,
 .btn-delete:active {
     background-color: #ff4d4d;
