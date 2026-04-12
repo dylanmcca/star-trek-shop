@@ -27,12 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = os.getenv('DEBUG', '0').strip().lower() in ('1', 'true', 'yes', 'on')
 
 ALLOWED_HOSTS = [
-    'localhost', # vs code preview
-    '127.0.0.1', # listen for stripe webhooks
-    'star-trek-shop-eff7261534e5.herokuapp.com' # heroku app url
+    'localhost',  # vs code preview
+    '127.0.0.1',  # listen for stripe webhooks
+    'star-trek-shop-eff7261534e5.herokuapp.com'  # heroku app url
 ]
 
 
@@ -88,11 +88,11 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', #for login/logout allauth
+                'django.template.context_processors.request',  # for login/logout allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', # for media files
-                'bag.contexts.bag_contents', # for bag contents in nav
+                'django.template.context_processors.media',  # for media files
+                'bag.contexts.bag_contents',  # for bag contents in nav
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -132,7 +132,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-else: 
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -204,7 +204,7 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
-if 'DEVELOPMENT' in os.environ:
+if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'trekkie@shop.com'
 
