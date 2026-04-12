@@ -24,12 +24,20 @@
             background-size: clamp(420px, 95vw, 1100px) auto;
             background-position: center 140px;
         }
+
+        body.mobile-main-nav-open {
+            background-position: center 500px;
+        }
     }
 
     @media (max-width: 575px) {
         body {
             background-size: clamp(360px, 110vw, 820px) auto;
             background-position: center 130px;
+        }
+
+        body.mobile-main-nav-open {
+            background-position: center 470px;
         }
     }
 
@@ -71,4 +79,31 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        (function() {
+            const mainNav = document.getElementById('main-nav');
+            if (!mainNav) return;
+
+            const syncMobileNavClass = () => {
+                const isMobile = window.innerWidth < 992;
+                const isExpanded = mainNav.classList.contains('show');
+                document.body.classList.toggle('mobile-main-nav-open', isMobile && isExpanded);
+            };
+
+            // Bootstrap 4 emits jQuery events for collapse; class observation is a reliable fallback.
+            const observer = new MutationObserver(syncMobileNavClass);
+            observer.observe(mainNav, { attributes: true, attributeFilter: ['class'] });
+
+            mainNav.addEventListener('show.bs.collapse', syncMobileNavClass);
+            mainNav.addEventListener('shown.bs.collapse', syncMobileNavClass);
+            mainNav.addEventListener('hide.bs.collapse', syncMobileNavClass);
+            mainNav.addEventListener('hidden.bs.collapse', syncMobileNavClass);
+            window.addEventListener('resize', syncMobileNavClass);
+            syncMobileNavClass();
+        })();
+    </script>
 {% endblock %}
